@@ -1,6 +1,6 @@
 
 
-class Task_00 {
+class Task 00 {
 
     public static void main(String[] args) {
         System.out.print("Hello world");
