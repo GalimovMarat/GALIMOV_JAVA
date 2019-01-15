@@ -12,8 +12,6 @@ public class Task_02 {
 
         return;
     }
-
-
 public static void main (String [] args) {
 
         Scanner sc = new Scanner(System.in);
