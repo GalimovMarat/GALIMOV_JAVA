@@ -8,18 +8,19 @@ public class ArrayList {
     private int index;
 
 
-
     public void setElement() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Insert the number - ");
         this.Element = scanner.nextInt();
     }
 
+
     public void setIndex() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("index - ");
         this.index = scanner.nextInt();
     }
+
 
     public ArrayList() {
         this.lines = new int[maxSize];
@@ -37,6 +38,7 @@ public class ArrayList {
         }
     }
 
+
     void print() {
         for (int i = 0; i < lines.length; i++) {
             System.out.print(lines[i] + "; ");
@@ -44,6 +46,7 @@ public class ArrayList {
         }
         System.out.println(" ");
     }
+
 
     void InsertAtTheEndOfTheArray() {
         setElement();
@@ -56,13 +59,15 @@ public class ArrayList {
         lines[index] = Element;
     }
 
-     void InsertToTheBeginningOfTheArray (){
+
+    void InsertToTheBeginningOfTheArray (){
          setElement();
         for (int i  = 1; i < lines.length; i++){
             lines[lines.length - i] = lines[lines.length-(i+1)];
         }
         lines[0] = Element;
     }
+
 
     void insertByIndex () {
         setElement();
@@ -73,7 +78,9 @@ public class ArrayList {
         }
         lines[index] = Element;
     }
-     void getElementByIndex () {
+
+
+    void getElementByIndex () {
         setIndex();
         System.out.println("Element with an index - " + lines[index]);
      }
@@ -92,6 +99,7 @@ public class ArrayList {
          }
      }
 
+
      int getCounter() {
         for (int i = 0; i <lines.length; i++){
             if (lines[i]>0){
@@ -102,12 +110,14 @@ public class ArrayList {
          System.out.println(counter + " - items");
          return counter;
     }
-              void contains () {
-              setElement();
-              int count = 0;
-              for ( int i = 0; i < lines.length; i++ ){
-                  if (lines[i] == Element ){
-                     count++;
+
+
+    void contains () {
+        setElement();
+        int count = 0;
+        for ( int i = 0; i < lines.length; i++ ){
+            if (lines[i] == Element ){
+                count++;
                   }
               }
               if (count > 0){
@@ -119,6 +129,12 @@ public class ArrayList {
               return;
           }
 
+          void IndexOf () {
+        int indexArray[] = new int [maxSize];
+        
+          }
 }
+
+
 
 
