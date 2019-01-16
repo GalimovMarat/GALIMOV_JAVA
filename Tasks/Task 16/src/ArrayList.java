@@ -1,28 +1,28 @@
-import java.util.Scanner;
+ import java.util.Scanner;
 
-public class ArrayList {
-    private final int maxSize = 20;
-    private int lines[];
-    private int counter;
-    private int Element;
-    private int index;
+ public class ArrayList {
+     private final int maxSize = 20;
+     private int lines[];
+     private int counter;
+     private int Element;
+     private int index;
 
 
-    public void setElement() {
+     public void setElement() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Insert the number - ");
         this.Element = scanner.nextInt();
     }
 
 
-    public void setIndex() {
+     public void setIndex() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("index - ");
         this.index = scanner.nextInt();
     }
 
 
-    public ArrayList() {
+     public ArrayList() {
         this.lines = new int[maxSize];
         this.counter = 0;
         this.Element = 0;
@@ -30,7 +30,7 @@ public class ArrayList {
     }
 
 
-    void AutoArray() {
+     void AutoArray() {
         for (int counter = 0; counter < maxSize/2; counter++) {
             this.lines[counter] = (int) ((Math.random() * 100))+1;
            // System.out.println(counter + " " + lines[counter]);
@@ -39,7 +39,8 @@ public class ArrayList {
     }
 
 
-    void print() {
+     void print() {
+         getCounter();
         for (int i = 0; i < lines.length; i++) {
             System.out.print(lines[i] + "; ");
 
@@ -48,7 +49,7 @@ public class ArrayList {
     }
 
 
-    void InsertAtTheEndOfTheArray() {
+     void InsertAtTheEndOfTheArray() {
         setElement();
         int index = 0;
         for (int i = 0; i < lines.length; i++) {
@@ -60,7 +61,7 @@ public class ArrayList {
     }
 
 
-    void InsertToTheBeginningOfTheArray (){
+     void InsertToTheBeginningOfTheArray (){
          setElement();
         for (int i  = 1; i < lines.length; i++){
             lines[lines.length - i] = lines[lines.length-(i+1)];
@@ -69,7 +70,7 @@ public class ArrayList {
     }
 
 
-    void insertByIndex () {
+     void insertByIndex () {
         setElement();
         setIndex();
         for ( int i = 1; i < lines.length - index; i++){
@@ -80,7 +81,7 @@ public class ArrayList {
     }
 
 
-    void getElementByIndex () {
+     void getElementByIndex () {
         setIndex();
         System.out.println("Element with an index - " + lines[index]);
      }
@@ -112,7 +113,7 @@ public class ArrayList {
     }
 
 
-    void contains () {
+     void contains () {
         setElement();
         int count = 0;
         for ( int i = 0; i < lines.length; i++ ){
@@ -129,10 +130,36 @@ public class ArrayList {
               return;
           }
 
-          void IndexOf () {
-        int indexArray[] = new int [maxSize];
-        
-          }
+
+     void IndexOf () {
+         setElement();
+         int indexArray[] = new int [maxSize];
+         StringBuilder matches = new StringBuilder();
+         int a = 0;
+         for ( int i = 0; i < lines.length; i++) {
+             if (lines[i] == Element) {
+                 matches.append(i + "; ");
+                 a++;
+             }
+         }
+         if ( a == 0){ System.out.println("No mathes!");
+         }
+         else { System.out.println("Match item no. - " + matches);}
+     }
+
+
+     void Reverse (){
+         getCounter();
+         for (int i = 0; i < counter/2; i++) {
+            int tmp = lines[i];
+            lines[i] = lines[counter - 1 - i];
+            lines[counter - 1 -i] = tmp;
+         }
+         print();
+     }
+
+
+
 }
 
 

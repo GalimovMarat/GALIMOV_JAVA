@@ -21,11 +21,15 @@ public class MainArray {
        // array.getElementByIndex();
 
 
-         array.sort();
-         array.print();
+        // array.sort();
+        // array.print();
 
-         array.contains();
+        // array.contains();
 
+
+        // array.IndexOf();
+
+         array.Reverse();
 
     }
 }
