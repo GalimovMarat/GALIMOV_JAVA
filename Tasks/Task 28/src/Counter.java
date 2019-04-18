@@ -14,8 +14,10 @@ class Counter extends Thread {
     @Override
     public void run() {
         // TODO: считаете числа от from до to и кладете результат в sumResult.
-        if ( this.to > array.length){ this.to = array.length - 1;}
-        for (int i = this.from; i <= this.to ; i++) {
+        if (this.to > array.length) {
+            this.to = array.length - 1;
+        }
+        for (int i = this.from; i <= this.to; i++) {
             sumResult = sumResult + this.array[i];
         }
     }
@@ -25,8 +27,8 @@ class Counter extends Thread {
         return sumResult;
     }
 
-    public void printFromTo (){
-        System.out.print(this.from + " " +  this.to);
+    public void printFromTo() {
+        System.out.print(this.from + " " + this.to);
         System.out.println(" ");
     }
 }
