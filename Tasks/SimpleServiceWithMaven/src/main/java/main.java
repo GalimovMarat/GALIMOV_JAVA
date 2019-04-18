@@ -8,17 +8,17 @@ public class main {
     public static void main(String[] args) throws SQLException {
         // чтобы конструкция была более гибкой из DataBaseConnector в MAIN
         // вытаскиваем следующее:
-        UserFromConsoleRetriever retriever = new UserFromConsoleRetriever();
+//        UserFromConsoleRetriever retriever = new UserFromConsoleRetriever();
 //        После применения JDBCTeamplate нам и это не нужно
 //        final String DB_USER = "postgres";
 //        final String DB_PASSWORD ="zapcon";
 //        final String DB_URL = "jdbc:postgresql://localhost:5432/";
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("org.postgresql.Driver");
-        dataSource.setUsername("postgres");
-        dataSource.setPassword("zapcon");
-        dataSource.setUrl("jdbc:postgresql://localhost:5432/");
-        UserRepositoryJdbcImpl userRepositoryJdbc = new UserRepositoryJdbcImpl(dataSource);
+//        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+//        dataSource.setDriverClassName("org.postgresql.Driver");
+//        dataSource.setUsername("postgres");
+//        dataSource.setPassword("zapcon");
+//        dataSource.setUrl("jdbc:postgresql://localhost:5432/");
+//        UserRepositoryJdbcImpl userRepositoryJdbc = new UserRepositoryJdbcImpl(dataSource);
 //
 //        // Соответственно меняем тут:
 ////        DataBaseConnector connector = new DataBaseConnector();
@@ -31,7 +31,7 @@ public class main {
         // connection меняем на connector.
 //      Statement statement = connection.createStatement();
 
-        // После реализации ResultSet в DataBaseConnector
+        // После реализации sultSet в DataBaseConnector
         // удаляем строку, она больше не нужна
 //        Statement statement = connector.createStatement();
 
@@ -50,9 +50,9 @@ public class main {
 //            }
 //        }
 
-        System.out.println(userRepositoryJdbc.findById(2l));
-//        System.out.println(userRepositoryJdbc.findById(21l));
-//        userRepositoryJdbc.save(retriever.retrieveUser());
+//        System.out.println(userRepositoryJdbc.findById(2l));
+////        System.out.println(userRepositoryJdbc.findById(21l));
+////        userRepositoryJdbc.save(retriever.retrieveUser());
 
 
 

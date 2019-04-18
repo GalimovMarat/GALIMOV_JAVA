@@ -20,9 +20,8 @@ public class UserRepositoryJdbcImpl implements UserRepository {
             "values (?,?,?,?)";
 
 
-    public UserRepositoryJdbcImpl(DataSource dataSource) {
-
-        this.jdbcTemplate = new JdbcTemplate(dataSource);
+    public UserRepositoryJdbcImpl(JdbcTemplate template) {
+        this.jdbcTemplate = template;
     }
 
     private RowMapper<User> usersRowMapper = (row, rowNumber) ->
