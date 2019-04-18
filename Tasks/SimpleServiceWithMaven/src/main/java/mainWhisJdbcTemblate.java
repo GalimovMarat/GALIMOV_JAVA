@@ -12,5 +12,6 @@ public class mainWhisJdbcTemblate {
         UserFromConsoleRetriever retriever = context.getBean(UserFromConsoleRetriever.class);
 
         userRepository.save(retriever.retrieveUser());
+
     }
 }
